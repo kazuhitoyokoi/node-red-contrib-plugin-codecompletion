@@ -1,0 +1,28 @@
+<script>
+    monaco.languages.registerInlineCompletionsProvider("javascript", {
+        provideInlineCompletions: async function (model) {
+            const editors = monaco.editor.getEditors();
+            let code = editors.find(function (editor) {
+                return editor.getModel()?.uri?.toString() === model.uri.toString();
+            }).getValue();
+            console.log("code=" + code);
+
+            console.log("generating code...")
+            const result = await $.ajax({
+                url: "completion",
+                type: "POST",
+                data: { "code": code }
+            });
+
+            let completion = result.completion;
+            console.log("completion=" + completion);
+            return Promise.resolve({
+                items: [{ insertText: completion }]
+            });
+        }
+    });
+
+    RED.comms.subscribe('completion', function (type, body) {
+        RED.notify(body.message, body.options);
+    });
+</script>
