@@ -5,7 +5,7 @@ Local LLM, [Granite Code Model](https://github.com/ibm-granite/granite-code-mode
 While typing the code manually, the editor will automatically suggest the generated code based on the existing code.
 The user can accept and insert the suggested code by simply pressing the Tab key.
 
-<img width="1440" alt="fizzbuzz" src="https://github.com/user-attachments/assets/2b57102b-e572-4335-919d-66907399391f">
+<img width="1440" alt="fizzbuzz" src="https://github.com/user-attachments/assets/39ca71b2-082c-4b8a-bc42-6eec5920d0d2">
 
 ## Setting up
 Since this plugin uses [Ollama](https://github.com/ollama/ollama), users need to install it in advance.
@@ -27,7 +27,4 @@ Since this plugin uses [Ollama](https://github.com/ollama/ollama), users need to
 ## Demonstration
 Generating FizzBuzz code
 
-
-https://github.com/user-attachments/assets/b9dabb40-ee5b-47c6-ace5-979d3cb5e03f
-
-
+https://github.com/user-attachments/assets/4d13a1a2-1167-479d-9dd0-109c89e29158
